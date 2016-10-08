@@ -1,6 +1,11 @@
 #include <iostream>
+#include <vector>
 int main()
 {
-	std::cout << "Hello World!" << std::endl;
+	std::vector<int> v;
+	for (unsigned int i = 0; i < 100; i++)
+	{
+		v.push_back(i);
+	}
 	return 0;
 }
