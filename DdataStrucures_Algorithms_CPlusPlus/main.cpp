@@ -7,10 +7,11 @@ using std::endl;
 
 int main()
 {
-	cout << gcd(20,30)<< endl;
-	cout << gcd(112, 42) << endl;
-	cout << gcd(45789, 34570) << endl;
-	cout << gcd(0, 0) << endl;
+	int a[] = { 1, 2, 3 };
+	int b[] = { 1, 2, 3 };
+	cout << inner_product<int>(a, b, 3) << endl;
+	cout << factor_Non_recursive(10) << endl;
+	cout << ackerman_fun(2, 2) << endl;
 	return 0;
 
 }

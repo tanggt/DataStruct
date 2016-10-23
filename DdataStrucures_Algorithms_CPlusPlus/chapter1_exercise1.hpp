@@ -1,13 +1,30 @@
 #ifndef _CHAPTER1_EXERCISE1_HPP_
 #define _CHAPTER1_EXERCISE1_HPP_
+
 #include <limits.h>
 #include <iostream>
 #include <cmath>
+
+/* 4. sum(0,n-1,a[i]*b[i])
+ * v1.0.0 by Thomson
+ * 2016.10.23 22:10 in UESTC
+*/
+template <typename T>
+T inner_product(const T *a, const T *b, const unsigned int n)
+{
+	T sum = 0;
+	for (unsigned int i = 0; i < n; i++)
+	{
+		sum += a[i] * b[i];
+	}
+	return sum;
+}
+
 /* 19. Non recursive factorial
  * v1.0.0 by Thomson
  * 2016.10.21 20:30 in UESTC
  */
-long long factor_Non_recursive(unsigned int n)
+long long factor_Non_recursive(const unsigned int n)
 {
 	/*if (n >= UINT_MAX)
 	{
@@ -29,7 +46,7 @@ long long factor_Non_recursive(unsigned int n)
  *  v1.0.0 by Thomson
  *  2016.10.21 20:30 in UESTC
  */
-long long fibonacci(unsigned int n)
+long long fibonacci(const unsigned int n)
 {
 	/*if (n >= UINT_MAX)
 	{
@@ -47,7 +64,7 @@ long long fibonacci(unsigned int n)
  *  v1.0.0 by Thomson
  *  2016.10.21 23:00 in UESTC
  */
-bool isEven(unsigned int n)
+inline bool isEven(const unsigned int n)
 {
 	return (n & 0x01) == 0;
 }
@@ -56,7 +73,7 @@ bool isEven(unsigned int n)
  *  v1.0.0 by Thomson
  *  2016.10.21 23:00 in UESTC
  */
-bool isOdd(unsigned int n)
+inline bool isOdd(const unsigned int n)
 {
 	return (n & 0x01) == 1;
 }
@@ -68,7 +85,7 @@ bool isOdd(unsigned int n)
  *  v1.0.0 by Thomson
  *  2016.10.21 23:00 in UESTC
  */
-long fun_n_odd_even(unsigned int n)
+long fun_n_odd_even(const unsigned int n)
 {
 	if (isEven(n))
 		return n / 2;
@@ -83,7 +100,7 @@ long fun_n_odd_even(unsigned int n)
 *  v1.0.0 by Thomson
 *  2016.10.23 18:14 in UESTC
 */
-long ackerman_fun(unsigned int i, unsigned int j)
+long ackerman_fun(const unsigned int i, const unsigned int j)
 {
 	if (1 == i && j >= 1)
 		return static_cast<long>(std::pow(2, j));
@@ -102,8 +119,7 @@ long ackerman_fun(unsigned int i, unsigned int j)
 *  v1.0.0 by Thomson
 *  2016.10.23 18:14 in UESTC
 */
-
-long gcd(unsigned int x, unsigned int y)
+long gcd(const unsigned int x, const unsigned int y)
 {
 	if (0 == y)
 		return x;
