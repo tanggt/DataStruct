@@ -7,6 +7,10 @@ using std::endl;
 
 int main()
 {
-	cout << fun_n_odd_even(7) << endl;
+	cout << gcd(20,30)<< endl;
+	cout << gcd(112, 42) << endl;
+	cout << gcd(45789, 34570) << endl;
+	cout << gcd(0, 0) << endl;
 	return 0;
+
 }
